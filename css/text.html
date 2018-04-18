@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background: #000;
+        }
+        h1{
+            color: #FF1177;
+            transition: 1.5s;
+            font-size: 100px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        h1:hover{
+            animation: run 1.5s ease infinite alternate;
+        }
+        @keyframes run {
+            0%{
+                color: #fff;
+                text-shadow:  0 0 10px #FFffff,
+                0 0 10px #FF1199,
+                0 0 15px #FF1177,
+                0 0 20px #FF1166,
+                0 0 25px #FF1163,
+                0 0 30px #ff1160,
+                0 0 35px #ff1156,
+                0 0 40px #ff1153;
+            }
+            100%{
+                color: #fff;
+                text-shadow:  0 0 5px #FFffff,
+                0 0 40px #FF1199,
+                0 0 35px #FF1177,
+                0 0 30px #FF1166,
+                0 0 25px #FF1163,
+                0 0 20px #FF1160,
+                0 0 15px #FF1156,
+                0 0 10px #FF1153;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>
+    RED
+</h1>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">	
+		<title>登录</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/pc5.css">
+		<style>
+			span{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+	<!--head-->
+    <div class="head">
+		<a href="index.html">
+		<img src="img5/logo.gif" alt="" style="margin-left: 15%;width: 150px;" class="fixed-top">
+		</a>
+	</div> 
+<!--banner-->
+	<div id="banner" style="background: #fff;opacity: 0.8">
+		<div class="banner_main">
+			<p class="text-center" style="font-size: 23px;margin-top: 10%">vivo账号登录</p>
+			<p class="text-center" style="margin-top: 20px"><input type="text" placeholder="账号/用户名/邮箱" id="name" onkeyup="checkName()" style="width: 300px;height: 40px;font-size: 14px;padding-left: 5px;">
+				<br><span id="nameSpan"></span></p>
+			<p class="text-center" style="margin-top: 20px"><input type="password" placeholder="密码"
+			id="pwd" onkeyup="checkPwd()" style="width: 300px;height: 40px;font-size: 14px;
+			padding-left: 5px"><br><span id="pwdSpan"></span></p>
+		    <p class="text-right" style="width: 350px;"><a href="" style="text-decoration: none">忘记密码？</a></p>
+			<p class="text-center" style="margin-top: 20px"><button type="submit" style="width: 300px;height: 40px;
+			background: blue;color: wheat;border: none;font-size: 16px" id="but" onclick="changUrl()">登录</button></p>
+			<a href="index6.html"><p class="text-center" style="margin-top: 20px"><button type="button" style="width: 300px;height: 40px;
+			font-size: 16px;border: none;background: #8c8c8c;color: whitesmoke">注册vivo账号</button></p></a>
+			<p class="text-center" style="margin-top: 10px;">其他方式登录</p>
+            <p class="text-center" style="margin-top: 20px"><a href=""><img src="img5/bj2.gif" alt=""></a>
+				<a href=""><img src="img5/bj3.gif" alt=""></a>
+			</p>
+		</div>
+	</div>
+
+	<!--script-->
+	<script src="jquery-1.10.2.js"></script>
+	<script src="bootstrap.js"></script>
+	<script>
+		// 用户名验证
+        function checkName(){
+            var name=document.getElementById("name").value;
+            if(name.length<4){
+                document.getElementById("nameSpan").innerHTML="用户名为必填"
+            }else{
+                document.getElementById("nameSpan").innerHTML=""
+            }}
+        //    密码验证
+        function checkPwd(){
+            var v=document.getElementById("pwd").value;
+            if(v.length<6){
+            	document.getElementById("pwdSpan").innerHTML="密码不能少于6位"
+                
+            }else if(v.length>6){
+                document.getElementById("but").style.background="#008ddd";
+                document.getElementById("but").style.color="#fff"
+                document.getElementById("pwdSpan").innerHTML=""
+            }
+        }
+
+        //跳转
+        function changUrl() {
+            window.location.href="index1.html"
+        }
+
+	</script>
+	</body>
+</html>
